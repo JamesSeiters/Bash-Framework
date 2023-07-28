@@ -1,0 +1,6 @@
+is_writable() {
+    ### Sets $? to 1 if not writable.
+    ### is_writable || echo "Read only"
+    local -n ref=$1
+    eval "ref+=" >2/dev/null
+}

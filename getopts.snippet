@@ -1,0 +1,19 @@
+# First option : is for silent error.
+while getopts ":ho:" option; do
+
+  case "${option}" in
+    h)
+      # Display help
+      exit 0
+      ;;
+    o)
+      # Validate option stored in $OPTARG.
+      ;;
+    :)
+      error_exit -e "Parameter required." -t "Option -$OPTARG requires an argument." -s 124
+      ;;
+    *)
+      error_exit -e "Unknown option: -${OPTARG}." -t "Please enter a valid option." -s 124
+      ;;
+  esac
+done
