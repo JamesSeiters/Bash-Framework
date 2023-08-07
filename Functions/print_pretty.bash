@@ -9,7 +9,7 @@
 # Date: 2023-27-07                                                    #
 #######################################################################
 
-# Checks the first argument to determine what pattern to use. If the first argument is an error, warning, or default, then use that pattern.
+# Checks the first argument to determine what pattern to use. If the first argument is error or warning then use that pattern.
 # If the first argument is an empty string, then use the default pattern. Otherwise, return an error..
 print_pretty() {
 	# Defaults
